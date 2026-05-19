@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlos Andres — Actor · Model · Filmmaker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #f0ebe2;
+    --warm-white: #faf8f4;
+    --ink: #0e0d0b;
+    --charcoal: #1c1a17;
+    --mid: #6b6459;
+    --muted: #a09a8e;
+    --gold: #c4a96b;
+    --gold-light: #e8d5a3;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ink);
+    color: var(--cream);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 3rem;
+    mix-blend-mode: normal;
+    background: rgba(14,13,11,0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(196,169,107,0.15);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.25s;
+  }
+
+  .nav-links a:hover { color: var(--cream); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+
+  .hero-image-side {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(15%) contrast(1.05);
+    transform: scale(1.05);
+    animation: heroZoom 8s ease-out forwards;
+  }
+
+  @keyframes heroZoom {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.0); }
+  }
+
+  .hero-image-side::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 60%, var(--ink) 100%),
+                linear-gradient(to top, var(--ink) 0%, transparent 30%);
+  }
+
+  .hero-content-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 4rem 4rem 3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.3s ease forwards;
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--warm-white);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s ease forwards;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.7s ease forwards;
+  }
+
+  .hero-tagline span {
+    color: var(--gold);
+    margin: 0 0.6rem;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.9s ease forwards;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.25s, transform 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-outline {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border: 1px solid rgba(196,169,107,0.4);
+    color: var(--gold);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.25s, color 0.25s;
+  }
+
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
+
+  .hero-stats {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    padding: 0 3rem;
+    display: flex;
+    gap: 3rem;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeUp 0.8s 1.1s ease forwards;
+  }
+
+  .stat { text-align: left; }
+
+  .stat-n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-l {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-top: 2px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 3rem; }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--warm-white);
+    letter-spacing: 0.04em;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(196,169,107,0.2);
+  }
+
+  /* ── GALLERY ── */
+  #gallery { background: var(--charcoal); }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 8px;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .gallery-item:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s;
+    filter: grayscale(10%);
+    display: block;
+    min-height: 300px;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.04);
+    filter: grayscale(0%);
+  }
+
+  .gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(14,13,11,0.5) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .gallery-item:hover::after { opacity: 1; }
+
+  /* ── REELS ── */
+  #reels { background: var(--ink); }
+
+  .reels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .reel-card {
+    background: var(--charcoal);
+    border: 1px solid rgba(196,169,107,0.1);
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .reel-card:hover {
+    border-color: rgba(196,169,107,0.4);
+    transform: translateY(-3px);
+  }
+
+  .reel-thumb {
+    height: 180px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reel-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+
+  .reel-card:hover .reel-thumb-img { opacity: 0.7; }
+
+  .reel-play {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(196,169,107,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .reel-card:hover .reel-play {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .reel-play svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--cream);
+    margin-left: 3px;
+  }
+
+  .reel-card:hover .reel-play svg { fill: var(--ink); }
+
+  .reel-info {
+    padding: 1.2rem 1.4rem;
+    border-top: 1px solid rgba(196,169,107,0.1);
+  }
+
+  .reel-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--warm-white);
+    margin-bottom: 4px;
+  }
+
+  .reel-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--charcoal); }
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .about-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--gold-light);
+    margin-bottom: 2rem;
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+  }
+
+  .about-body {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.5rem;
+  }
+
+  .tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1px solid rgba(196,169,107,0.3);
+    color: var(--gold);
+  }
+
+  .skills-table { width: 100%; }
+
+  .skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(196,169,107,0.1);
+  }
+
+  .skill-name {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  .skill-bar-wrap {
+    width: 120px;
+    height: 2px;
+    background: rgba(196,169,107,0.15);
+    position: relative;
+  }
+
+  .skill-bar {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    background: var(--gold);
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--ink); }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--warm-white);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-sub {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-items { display: flex; flex-direction: column; gap: 1px; }
+
+  .contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    background: var(--charcoal);
+    border-left: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  .contact-item:hover { border-left-color: var(--gold); }
+
+  .contact-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+
+  .contact-value {
+    font-size: 0.85rem;
+    color: var(--cream);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2rem 3rem;
+    border-top: 1px solid rgba(196,169,107,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    color: var(--mid);
+    letter-spacing: 0.1em;
+  }
+
+  .footer-copy {
+    font-size: 0.65rem;
+    color: var(--mid);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { gap: 1.5rem; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-image-side { position: absolute; inset: 0; }
+    .hero-image-side::after { background: rgba(14,13,11,0.65); }
+    .hero-content-side { padding: 8rem 1.5rem 6rem; justify-content: flex-end; }
+    .hero-stats { padding: 0 1.5rem; gap: 2rem; bottom: 2rem; }
+    section { padding: 4rem 1.5rem; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item:first-child { grid-column: span 2; }
+    .reels-grid { grid-template-columns: 1fr; }
+    .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Carlos Andres</a>
+  <ul class="nav-links">
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reels">Reels</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-image-side">
+    <img src="https://i.imgur.com/npxSuYN.jpeg" alt="Carlos Andres">
+  </div>
+  <div class="hero-content-side">
+    <p class="hero-eyebrow">Denver, Colorado &nbsp;·&nbsp; Bilingual EN / ES</p>
+    <h1 class="hero-name">Carlos<br><em>Andres</em></h1>
+    <p class="hero-tagline">Actor <span>·</span> Model <span>·</span> Filmmaker</p>
+    <div class="hero-cta-group">
+      <a href="#reels" class="btn-primary">View Reels</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-n">7+</div>
+      <div class="stat-l">Years Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">2</div>
+      <div class="stat-l">Feature Docs</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">EN/ES</div>
+      <div class="stat-l">Bilingual</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-label">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Gallery</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://i.imgur.com/lX3goE2.jpeg" alt="Carlos Andres modeling">
+    </div>
+    <div class="gallery-item">
+      <img src="https://i.imgur.com/AhBoxMP.jpeg" alt="Carlos Andres editorial">
+    </div>
+    <div class="gallery-item">
+      <img src="https://i.imgur.com/Reutbs7.jpeg" alt="Carlos Andres lifestyle">
+    </div>
+    <div class="gallery-item">
+      <img src="https://i.imgur.com/3vkKd8q.jpeg" alt="Carlos Andres fitness">
+    </div>
+    <div class="gallery-item">
+      <img src="https://i.imgur.com/XY5zn0w.jpeg" alt="Carlos Andres portrait">
+    </div>
+    <div class="gallery-item">
+      <img src="https://i.imgur.com/npxSuYN.jpeg" alt="Carlos Andres commercial">
+    </div>
+  </div>
+</section>
+
+<!-- REELS -->
+<section id="reels">
+  <div class="section-label">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Media Reels</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="reels-grid">
+    <a href="https://vimeo.com/1185292814" target="_blank" class="reel-card">
+      <div class="reel-thumb">
+        <img src="https://i.imgur.com/lX3goE2.jpeg" alt="Demo Reel" class="reel-thumb-img">
+        <div class="reel-play">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <div class="reel-info">
+        <div class="reel-title">Demo Reel</div>
+        <div class="reel-sub">Filmmaker · Editor · 2026</div>
+      </div>
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PLhYiojrENoATjj9kI6aM_nBKT6K4PNB6I" target="_blank" class="reel-card">
+      <div class="reel-thumb">
+        <img src="https://i.imgur.com/AhBoxMP.jpeg" alt="Portfolio" class="reel-thumb-img">
+        <div class="reel-play">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <div class="reel-info">
+        <div class="reel-title">Portfolio</div>
+        <div class="reel-sub">Commercial · Documentary</div>
+      </div>
+    </a>
+    <div class="reel-card" style="opacity:0.5; cursor:default;">
+      <div class="reel-thumb">
+        <img src="https://i.imgur.com/npxSuYN.jpeg" alt="Spokesperson Reel" class="reel-thumb-img">
+        <div class="reel-play">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <div class="reel-info">
+        <div class="reel-title">Spokesperson Reel</div>
+        <div class="reel-sub">Coming Soon</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">
+    <span class="section-num">03</span>
+    <h2 class="section-title">About</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-layout">
+    <div>
+      <p class="about-quote">"I tell stories that move people — from a mission field in Perú to a commercial set in Denver."</p>
+      <p class="about-body">Filmmaker, video editor, and on-camera talent with a B.F.A. in Film & Television from the University of Colorado Denver and 7+ years of professional production experience. Bilingual in English and Spanish, with international field experience and a full professional gear setup.</p>
+      <p class="about-body">Whether you need a cinematic brand video, a documentary edit, social content, or an on-camera spokesperson — I handle everything from pre-production through final delivery.</p>
+      <div class="about-tags">
+        <span class="tag">Actor</span>
+        <span class="tag">Model</span>
+        <span class="tag">Filmmaker</span>
+        <span class="tag">Video Editor</span>
+        <span class="tag">Voice Over EN/ES</span>
+        <span class="tag">Drone Operator</span>
+        <span class="tag">Motion Graphics</span>
+        <span class="tag">Spokesperson</span>
+      </div>
+    </div>
+    <div class="skills-table">
+      <div class="skill-row">
+        <span class="skill-name">Video Editing & Post-Production</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Motion Graphics & Animation</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Color Grading</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">On-Camera & Spokesperson</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Voice Over (EN / ES)</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Cinematography</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Drone Operation (DJI)</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Contact</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-layout">
+    <div>
+      <h3 class="contact-heading">Let's work<br>together.</h3>
+      <p class="contact-sub">Available for acting, modeling, spokesperson videos, brand content, video production, and voice over work in Denver and beyond.</p>
+      <a href="mailto:andrescarloswork@gmail.com" class="btn-primary">Send an Email</a>
+    </div>
+    <div class="contact-items">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">andrescarloswork@gmail.com</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Denver, Colorado</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Languages</span>
+        <span class="contact-value">English · Spanish</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Demo Reel</span>
+        <span class="contact-value"><a href="https://vimeo.com/1185292814" target="_blank" style="color:var(--gold); text-decoration:none;">vimeo.com/carlosandres</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value"><a href="https://www.linkedin.com/in/carlos-aramburu-51bb80332" target="_blank" style="color:var(--gold); text-decoration:none;">carlos-aramburu</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-name">Carlos Andres &nbsp;·&nbsp; carlosandres.me</span>
+  <span class="footer-copy">© 2026 · Denver, Colorado</span>
+</footer>
+
+</body>
+</html>
