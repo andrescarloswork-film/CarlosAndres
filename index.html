@@ -96,9 +96,11 @@
   .stories-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:6px; }
   .stories-grid .gallery-item { overflow:hidden; aspect-ratio:3/4; grid-column:span 1 !important; }
   .stories-grid .gallery-item img { width:100%; height:100% !important; object-fit:cover !important; object-position:center top; }
+  .film-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; }
   @media (max-width: 768px) { 
     .stories-grid { grid-template-columns:1fr; }
     .stories-grid .gallery-item { aspect-ratio:4/5; }
+    .film-grid { grid-template-columns:1fr; gap:1.5rem; }
   }
   .hero-verse { margin-bottom: 1.5rem; }
   .lang-toggle { display: flex; align-items: center; gap: 0; border: 1px solid rgba(196,169,107,0.3); overflow: hidden; }
@@ -243,11 +245,11 @@
   </button>
   <ul class="nav-links" id="nav-links">
     <li><a href="#stories" data-en="Stories" data-es="Historias">Stories</a></li>
-    <li><a href="#content" data-en="Video Production" data-es="Producción de Video">Video Production</a></li>
-    <li><a href="#webdesign" data-en="Web Design" data-es="Diseño Web">Web Design</a></li>
-    <li><a href="#graphicdesign" data-en="Graphic/Motion" data-es="Gráfico/Movimiento">Graphic/Motion</a></li>
     <li><a href="#acting" data-en="Acting" data-es="Actuación">Acting</a></li>
     <li><a href="#modeling" data-en="Modeling" data-es="Modelaje">Modeling</a></li>
+    <li><a href="#content" data-en="Video Production" data-es="Producción de Video">Video Production</a></li>
+    <li><a href="#graphicdesign" data-en="Graphic/Motion" data-es="Gráfico/Movimiento">Graphic/Motion</a></li>
+    <li><a href="#webdesign" data-en="Web Design" data-es="Diseño Web">Web Design</a></li>
     <li><a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
     <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
   </ul>
@@ -294,210 +296,99 @@
   </div>
 </div>
 
-<!-- 01 CONTENT CREATOR -->
-<section id="content">
+<!-- 05 STORIES -->
+<section id="stories" style="background:var(--ink);">
   <div class="section-label">
-    <span class="section-num">01</span>
-    <h2 class="section-title" data-key="s3-title">Video Production & Filmmaking</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="content-layout">
-    <div>
-      <div class="services-grid">
-        <div class="service-item"><div class="service-name" data-key="svc-editing">Video Editing</div><div class="service-desc" data-key="svc-editing-desc">Premiere Pro, DaVinci Resolve, Final Cut Pro. Short & long form.</div></div>
-        <div class="service-item"><div class="service-name" data-key="svc-motion">Motion Graphics</div><div class="service-desc" data-key="svc-motion-desc">After Effects animation, kinetic typography, logo reveals.</div></div>
-        <div class="service-item"><div class="service-name" data-key="svc-color">Color Grading</div><div class="service-desc" data-key="svc-color-desc">Cinematic color correction for any format or platform.</div></div>
-        <div class="service-item"><div class="service-name" data-key="svc-drone">Drone Footage</div><div class="service-desc" data-key="svc-drone-desc">Aerial video with DJI Mini 3. Denver & Colorado area.</div></div>
-        <div class="service-item"><div class="service-name" data-key="svc-sound">Sound Design</div><div class="service-desc" data-key="svc-sound-desc">Audio mixing, music sync, voice over in EN & ES.</div></div>
-        <div class="service-item"><div class="service-name" data-key="svc-doc">Documentary</div><div class="service-desc" data-key="svc-doc-desc">Feature & short-form docs. International field experience.</div></div>
-      </div>
-      <a href="#contact" class="btn-primary" style="margin-right:1rem;" data-key="get-quote">Get a Quote</a>
-      <a href="https://www.youtube.com/playlist?list=PLhYiojrENoATjj9kI6aM_nBKT6K4PNB6I" target="_blank" class="btn-outline" data-key="view-portfolio">View Portfolio</a>
-      <a href="WorkResume_2026.pdf" target="_blank" class="btn-outline" style="margin-top:0.8rem;display:inline-block;" data-key="dl-resume" id="work-resume-link">Download Resume</a>
-    </div>
-    <div class="reels-stack">
-      <div class="reel-embed" style="margin-bottom:1rem;">
-        <iframe src="https://www.youtube.com/embed/nSJw0LC0OrA" allowfullscreen></iframe>
-      </div>
-      <div style="margin-bottom:1rem;">
-        <div class="reel-sub" style="padding:0.5rem 0;">Filmmaker · Editor · 2026</div>
-      </div>
-      <a href="https://www.youtube.com/playlist?list=PLhYiojrENoATjj9kI6aM_nBKT6K4PNB6I" target="_blank" class="reel-card">
-        <div class="reel-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="reel-info-text"><div class="reel-title">Full Portfolio</div><div class="reel-sub">Commercial · Documentary · Social</div></div>
-      </a>
-      <div style="margin-top:1rem;padding:1.5rem;background:var(--ink);border:1px solid rgba(196,169,107,0.1);">
-        <div class="section-sub" style="margin-bottom:0.5rem;" data-key="based-in">Based in Denver, CO</div>
-        <p style="font-size:0.8rem;color:var(--muted);line-height:1.8;" data-key="based-body">Available for local shoots, remote post-production, and travel. Bilingual workflows in English and Spanish. </p>
-      </div>
-      <div style="margin-top:1.5rem;">
-        <a href="#contact" class="btn-outline" data-key="hire-me">Hire Me for a Project</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 02 WEB DESIGN -->
-<section id="webdesign">
-  <div class="section-label">
-    <span class="section-num">02</span>
-    <h2 class="section-title" data-key="s-web-title">Web Design</h2>
+    <span class="section-num">06</span>
+    <h2 class="section-title" data-key="s5-title">Stories</h2>
     <div class="section-line"></div>
   </div>
 
-  <div class="modeling-layout">
-    <div>
-      <!-- WEBSITE EXAMPLE -->
-      <div style="margin-bottom:2rem;">
-        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;" data-key="web-example-label">Live Example</div>
-<a href="https://carlosandres.me" target="_blank" class="btn-outline" style="font-size:0.75rem;" data-key="web-view-live">View Live Site — carlosandres.me</a>
-      </div>
+  <!-- STORY CAROUSEL -->
+  <div style="position:relative;">
 
-      <!-- DOMAIN NOTE -->
-      <div class="offer-box" style="margin-top:1.5rem;">
-        <div class="offer-title" data-key="web-domain-title">Domain & Hosting</div>
-        <p class="offer-body" data-key="web-domain-body">Your website is hosted for FREE on GitHub Pages. The only yearly cost is your domain name — purchased separately through Namecheap:</p>
-        <div class="offer-tags">
-          <span class="tag">.com — ~$15-18/yr</span>
-          <span class="tag">.me — ~$10-15/yr</span>
-          <span class="tag">.co — ~$10-12/yr</span>
-          <span class="tag" data-key="web-hosting-free">Hosting — FREE</span>
-        </div>
-        <p class="offer-body" style="font-size:0.78rem;margin-top:0.8rem;" data-key="web-domain-note">I can set up your domain and connect it to your site for a one-time setup fee.</p>
+    <!-- NAVIGATION DOTS & ARROWS -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;">
+      <button onclick="prevStory()" style="background:none;border:1px solid rgba(196,169,107,0.3);color:var(--gold);padding:0.5rem 1rem;cursor:pointer;font-size:1.2rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(196,169,107,0.3)'">←</button>
+      <div style="display:flex;gap:0.5rem;align-items:center;">
+        <span id="dot-0" onclick="goToStory(0)" style="width:8px;height:8px;border-radius:50%;background:var(--gold);cursor:pointer;transition:all 0.2s;"></span>
+        <span id="dot-1" onclick="goToStory(1)" style="width:8px;height:8px;border-radius:50%;background:rgba(196,169,107,0.3);cursor:pointer;transition:all 0.2s;"></span>
       </div>
+      <button onclick="nextStory()" style="background:none;border:1px solid rgba(196,169,107,0.3);color:var(--gold);padding:0.5rem 1rem;cursor:pointer;font-size:1.2rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(196,169,107,0.3)'">→</button>
     </div>
 
-    <div>
-      <!-- PACKAGES -->
-      <div class="offer-box" style="margin-bottom:1.5rem;">
-        <div class="section-sub" data-key="web-packages-label">Packages</div>
+    <!-- STORY 1 — WEIGHT LOSS JOURNEY -->
+    <div id="story-0" class="story-slide" >
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;">
+        <span style="font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">June 9, 2026</span>
+        <div style="flex:1;height:1px;background:rgba(196,169,107,0.1);"></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;">
+        <span style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);">Film Premiere</span>
+        <div style="flex:1;height:1px;background:rgba(196,169,107,0.2);"></div>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);">Denver Side Hustle · July 11, 2026</span>
+      </div>
 
-        <!-- Starter -->
-        <div style="border-bottom:1px solid rgba(196,169,107,0.15);padding-bottom:1.2rem;margin-bottom:1.2rem;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
-            <div class="offer-title" style="margin:0;" data-key="web-pkg1-title">Starter</div>
-            <span style="color:var(--gold);font-size:0.9rem;font-weight:600;">$100–300</span>
-          </div>
-          <p class="offer-body" data-key="web-pkg1-desc">Perfect for small businesses or personal brands just getting started. Single page website with up to 5 sections, contact form, mobile responsive, and basic SEO setup.</p>
-          <div class="offer-tags">
-            <span class="tag" data-key="web-tag-1page">1 Page</span>
-            <span class="tag" data-key="web-tag-5sec">Up to 5 Sections</span>
-            <span class="tag" data-key="web-tag-contact">Contact Form</span>
-            <span class="tag" data-key="web-tag-mobile">Mobile Responsive</span>
-          </div>
-        </div>
-
-        <!-- Professional -->
-        <div style="border-bottom:1px solid rgba(196,169,107,0.15);padding-bottom:1.2rem;margin-bottom:1.2rem;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
-            <div class="offer-title" style="margin:0;" data-key="web-pkg2-title">Professional</div>
-            <span style="color:var(--gold);font-size:0.9rem;font-weight:600;">$400–700</span>
-          </div>
-          <p class="offer-body" data-key="web-pkg2-desc">Multi-section website like this one. Includes bilingual (EN/ES) toggle, photo gallery, embedded videos, Google Search Console setup, sitemap, and full SEO optimization.</p>
-          <div class="offer-tags">
-            <span class="tag" data-key="web-tag-multi">Multi-Section</span>
-            <span class="tag" data-key="web-tag-bilingual">Bilingual EN/ES</span>
-            <span class="tag" data-key="web-tag-gallery">Gallery</span>
-            <span class="tag">SEO</span>
-          </div>
-        </div>
-
-        <!-- Premium -->
-        <div style="border-bottom:1px solid rgba(196,169,107,0.15);padding-bottom:1.2rem;margin-bottom:1.2rem;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
-            <div class="offer-title" style="margin:0;" data-key="web-pkg3-title">Premium</div>
-            <span style="color:var(--gold);font-size:0.9rem;font-weight:600;">$800–1300</span>
-          </div>
-          <p class="offer-body" data-key="web-pkg3-desc">Fully custom website with advanced animations, multiple languages, e-commerce ready, full SEO package, Google Business setup, and priority support.</p>
-          <div class="offer-tags">
-            <span class="tag" data-key="web-tag-custom">Full Custom</span>
-            <span class="tag" data-key="web-tag-anim">Animations</span>
-            <span class="tag" data-key="web-tag-ecom">E-Commerce Ready</span>
-            <span class="tag" data-key="web-tag-priority">Priority Support</span>
-          </div>
-        </div>
-
-        <!-- Maintenance -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="film-grid">
+        <!-- POSTER -->
         <div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
-            <div class="offer-title" style="margin:0;" data-key="web-pkg4-title">Maintenance</div>
-            <span style="color:var(--gold);font-size:0.9rem;font-weight:600;">$50–100/mo</span>
-          </div>
-          <p class="offer-body" data-key="web-pkg4-desc">Ongoing website updates, new sections, content changes, photo swaps, and general maintenance so your site always stays fresh and up to date.</p>
-          <div class="offer-tags">
-            <span class="tag" data-key="web-tag-updates">Monthly Updates</span>
-            <span class="tag" data-key="web-tag-content">Content Changes</span>
-            <span class="tag" data-key="web-tag-support">Ongoing Support</span>
-          </div>
+          <img src="It_s_Okay_Poster.png" alt="It's Okay Film Poster" style="width:100%;max-width:400px;display:block;">
         </div>
-
-        <span class="rate-badge" style="margin-top:1.2rem;display:inline-block;" data-key="web-rates">All rates by inquiry</span>
+        <!-- DESCRIPTION -->
+        <div>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;font-style:italic;color:var(--gold-light);line-height:1.4;margin-bottom:1rem;">It's Okay</p>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;">A short film done in one take. Will he win her back — or will he lose her forever? A raw, intimate story about love, vulnerability, and second chances.</p>
+          <p style="font-size:0.75rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Premiering at Denver Side Hustle</p>
+          <p style="font-size:0.85rem;color:var(--cream);margin-bottom:2rem;">July 11, 2026 · Denver, Colorado</p>
+          <div class="reel-embed" style="margin-bottom:1rem;">
+            <iframe src="https://www.youtube.com/embed/WkWy8OhdpCo" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="border:0;"></iframe>
+          </div>
+          <p style="font-size:0.7rem;color:var(--muted);font-style:italic;">Official Trailer</p>
+        </div>
       </div>
-
-      <a href="#contact" class="btn-primary" style="display:inline-block;" data-key="web-hire">Get a Quote</a>
-    </div>
-  </div>
-</section>
-
-<!-- 03 GRAPHIC/MOTION DESIGN -->
-<section id="graphicdesign">
-  <div class="section-label">
-    <span class="section-num">03</span>
-    <h2 class="section-title" data-key="s-graphic-title">Graphic/Motion Design</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="modeling-layout">
-    <div>
-      <!-- VIDEO EXAMPLES -->
-      <div style="margin-bottom:2rem;">
-        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;" data-key="graphic-examples">Featured Work</div>
-        <div class="reel-embed" style="margin-bottom:1rem;">
-          <iframe src="https://www.youtube.com/embed/wkfr9lSC1Tk" allowfullscreen></iframe>
-        </div>
-        <div class="reel-embed">
-          <iframe src="https://www.youtube.com/embed/9XYwXXtCFmQ" allowfullscreen></iframe>
-        </div>
+    </div><div id="story-1" style="display:none;" class="story-slide">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;">
+        <span style="font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">May 2026</span>
+        <div style="flex:1;height:1px;background:rgba(196,169,107,0.1);"></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;">
+        <span style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);" data-key="story-1-label">Weight Loss Journey</span>
+        <div style="flex:1;height:1px;background:rgba(196,169,107,0.2);"></div>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);">270 → 206 · Still Going 🏔️</span>
+      </div>
+      <div style="max-width:700px;margin-bottom:3rem;">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;font-style:italic;color:var(--gold-light);line-height:1.6;margin-bottom:1rem;" data-key="story-quote">"I worked out for years and saw nothing. Then I went into a calorie deficit — and everything changed."</p>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;" data-key="story-body">Calorie deficit, intermittent fasting, lifting heavier with low reps, and showing up consistently. 64 pounds down. Still going. 🏔️</p>
+      </div>
+      <div class="stories-grid" style="margin-bottom:3rem;">
+        <div class="gallery-item"><img src="Jun2019.JPG" alt="270 lbs April 2019"></div>
+        <div class="gallery-item"><img src="October2025.JPG" alt="250 lbs October 2025"></div>
+        <div class="gallery-item"><img src="May2026.JPG" alt="216 lbs May 2026"></div>
+        <div class="gallery-item"><img src="Jun2026.JPG" alt="206 lbs June 2026"></div>
       </div>
     </div>
 
-    <div>
-      <!-- SERVICES -->
-      <div class="offer-box">
-        <div class="section-sub" data-key="graphic-offer-label">What I Offer</div>
+    <!-- STORY 2 — IT'S OKAY FILM PREMIERE -->
+    
 
-        <div class="offer-title" data-key="graphic-offer-title">Adobe Creative Cloud Services</div>
-        <p class="offer-body" data-key="graphic-offer-body">Professional graphic and motion design using the full Adobe Creative Cloud suite — bringing your brand to life through stunning visuals and cinematic animation.</p>
-
-        <div class="offer-tags" style="margin-bottom:1.5rem;">
-          <span class="tag" data-key="gtag-1">Logo Design & Branding</span>
-          <span class="tag" data-key="gtag-2">Motion Graphics</span>
-          <span class="tag" data-key="gtag-3">Social Media Graphics</span>
-          <span class="tag" data-key="gtag-4">Video Titles & Lower Thirds</span>
-          <span class="tag" data-key="gtag-5">Color Grading</span>
-          <span class="tag" data-key="gtag-6">Animated Intros/Outros</span>
-          <span class="tag" data-key="gtag-7">Poster & Flyer Design</span>
-          <span class="tag" data-key="gtag-8">Credits Animation</span>
-        </div>
-
-        <div class="gear-strip">
-          <span class="gear-label" data-key="graphic-software">Software</span>
-          <div class="gear-items">
-            <span class="gear-item">After Effects</span>
-            <span class="gear-item">Premiere Pro</span>
-            <span class="gear-item">Illustrator</span>
-            <span class="gear-item">Photoshop</span>
-            <span class="gear-item">DaVinci Resolve</span>
-            <span class="gear-item"></span>
-          </div>
-        </div>
-
-        <span class="rate-badge" data-key="graphic-rates">Contact for Rates</span>
-      </div>
-
-      <a href="#contact" class="btn-primary" style="margin-top:1rem;display:inline-block;" data-key="graphic-hire">Get a Quote</a>
-    </div>
   </div>
+
+  <script>
+    let currentStory = 0;
+    const totalStories = 2;
+
+    function goToStory(n) {
+      document.getElementById('story-' + currentStory).style.display = 'none';
+      document.getElementById('dot-' + currentStory).style.background = 'rgba(196,169,107,0.3)';
+      currentStory = n;
+      document.getElementById('story-' + currentStory).style.display = 'block';
+      document.getElementById('dot-' + currentStory).style.background = 'var(--gold)';
+    }
+
+    function nextStory() { goToStory((currentStory + 1) % totalStories); }
+    function prevStory() { goToStory((currentStory - 1 + totalStories) % totalStories); }
+  </script>
+
 </section>
 
 <!-- 04 ACTING -->
@@ -636,111 +527,291 @@
   </div>
 </section>
 
-<!-- 05 STORIES -->
-<section id="stories" style="background:var(--ink);">
+<!-- 01 CONTENT CREATOR -->
+<section id="content">
   <div class="section-label">
-    <span class="section-num">06</span>
-    <h2 class="section-title" data-key="s5-title">Stories</h2>
+    <span class="section-num">01</span>
+    <h2 class="section-title" data-key="s3-title">Video Production & Filmmaking</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content-layout">
+    <div>
+      <div class="services-grid">
+        <div class="service-item"><div class="service-name" data-key="svc-editing">Video Editing</div><div class="service-desc" data-key="svc-editing-desc">Premiere Pro, DaVinci Resolve, Final Cut Pro. Short & long form.</div></div>
+        <div class="service-item"><div class="service-name" data-key="svc-motion">Motion Graphics</div><div class="service-desc" data-key="svc-motion-desc">After Effects animation, kinetic typography, logo reveals.</div></div>
+        <div class="service-item"><div class="service-name" data-key="svc-color">Color Grading</div><div class="service-desc" data-key="svc-color-desc">Cinematic color correction for any format or platform.</div></div>
+        <div class="service-item"><div class="service-name" data-key="svc-drone">Drone Footage</div><div class="service-desc" data-key="svc-drone-desc">Aerial video with DJI Mini 3. Denver & Colorado area.</div></div>
+        <div class="service-item"><div class="service-name" data-key="svc-sound">Sound Design</div><div class="service-desc" data-key="svc-sound-desc">Audio mixing, music sync, voice over in EN & ES.</div></div>
+        <div class="service-item"><div class="service-name" data-key="svc-doc">Documentary</div><div class="service-desc" data-key="svc-doc-desc">Feature & short-form docs. International field experience.</div></div>
+      </div>
+      <a href="#contact" class="btn-primary" style="margin-right:1rem;" data-key="get-quote">Get a Quote</a>
+      <a href="https://www.youtube.com/playlist?list=PLhYiojrENoATjj9kI6aM_nBKT6K4PNB6I" target="_blank" class="btn-outline" data-key="view-portfolio">View Portfolio</a>
+      <a href="WorkResume_2026.pdf" target="_blank" class="btn-outline" style="margin-top:0.8rem;display:inline-block;" data-key="dl-resume" id="work-resume-link">Download Resume</a>
+    </div>
+    <div class="reels-stack">
+      <div class="reel-embed" style="margin-bottom:1rem;">
+        <iframe src="https://www.youtube.com/embed/nSJw0LC0OrA" allowfullscreen></iframe>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <div class="reel-sub" style="padding:0.5rem 0;">Filmmaker · Editor · 2026</div>
+      </div>
+      <a href="https://www.youtube.com/playlist?list=PLhYiojrENoATjj9kI6aM_nBKT6K4PNB6I" target="_blank" class="reel-card">
+        <div class="reel-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="reel-info-text"><div class="reel-title">Full Portfolio</div><div class="reel-sub">Commercial · Documentary · Social</div></div>
+      </a>
+      <div style="margin-top:1rem;padding:1.5rem;background:var(--ink);border:1px solid rgba(196,169,107,0.1);">
+        <div class="section-sub" style="margin-bottom:0.5rem;" data-key="based-in">Based in Denver, CO</div>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.8;" data-key="based-body">Available for local shoots, remote post-production, and travel. Bilingual workflows in English and Spanish. </p>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <a href="#contact" class="btn-outline" data-key="hire-me">Hire Me for a Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 GRAPHIC/MOTION DESIGN -->
+<section id="graphicdesign">
+  <div class="section-label">
+    <span class="section-num">03</span>
+    <h2 class="section-title" data-key="s-graphic-title">Graphic/Motion Design</h2>
     <div class="section-line"></div>
   </div>
 
-  <!-- STORY CAROUSEL -->
-  <div style="position:relative;">
-
-    <!-- NAVIGATION DOTS & ARROWS -->
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;">
-      <button onclick="prevStory()" style="background:none;border:1px solid rgba(196,169,107,0.3);color:var(--gold);padding:0.5rem 1rem;cursor:pointer;font-size:1.2rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(196,169,107,0.3)'">←</button>
-      <div style="display:flex;gap:0.5rem;align-items:center;">
-        <span id="dot-0" onclick="goToStory(0)" style="width:8px;height:8px;border-radius:50%;background:var(--gold);cursor:pointer;transition:all 0.2s;"></span>
-        <span id="dot-1" onclick="goToStory(1)" style="width:8px;height:8px;border-radius:50%;background:rgba(196,169,107,0.3);cursor:pointer;transition:all 0.2s;"></span>
-      </div>
-      <button onclick="nextStory()" style="background:none;border:1px solid rgba(196,169,107,0.3);color:var(--gold);padding:0.5rem 1rem;cursor:pointer;font-size:1.2rem;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(196,169,107,0.3)'">→</button>
-    </div>
-
-    <!-- STORY 1 — WEIGHT LOSS JOURNEY -->
-    <div id="story-0" class="story-slide">
-      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;">
-        <span style="font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">May 2026</span>
-        <div style="flex:1;height:1px;background:rgba(196,169,107,0.1);"></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;">
-        <span style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);" data-key="story-1-label">Weight Loss Journey</span>
-        <div style="flex:1;height:1px;background:rgba(196,169,107,0.2);"></div>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);">270 → 206 · Still Going 🏔️</span>
-      </div>
-      <div style="max-width:700px;margin-bottom:3rem;">
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;font-style:italic;color:var(--gold-light);line-height:1.6;margin-bottom:1rem;" data-key="story-quote">"I worked out for years and saw nothing. Then I went into a calorie deficit — and everything changed."</p>
-        <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;" data-key="story-body">Calorie deficit, intermittent fasting, lifting heavier with low reps, and showing up consistently. 64 pounds down. Still going. 🏔️</p>
-      </div>
-      <div class="stories-grid" style="margin-bottom:3rem;">
-        <div class="gallery-item"><img src="Jun2019.JPG" alt="270 lbs April 2019"></div>
-        <div class="gallery-item"><img src="October2025.JPG" alt="250 lbs October 2025"></div>
-        <div class="gallery-item"><img src="May2026.JPG" alt="216 lbs May 2026"></div>
-        <div class="gallery-item"><img src="Jun2026.JPG" alt="206 lbs June 2026"></div>
-      </div>
-    </div>
-
-    <!-- STORY 2 — IT'S OKAY FILM PREMIERE -->
-    <div id="story-1" class="story-slide" style="display:none;">
-      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;">
-        <span style="font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">June 9, 2026</span>
-        <div style="flex:1;height:1px;background:rgba(196,169,107,0.1);"></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;">
-        <span style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);">Film Premiere</span>
-        <div style="flex:1;height:1px;background:rgba(196,169,107,0.2);"></div>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);">Denver Side Hustle · July 11, 2026</span>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
-        <!-- POSTER -->
-        <div>
-          <img src="It_s_Okay_Poster.png" alt="It's Okay Film Poster" style="width:100%;max-width:400px;display:block;">
+  <div class="modeling-layout">
+    <div>
+      <!-- VIDEO EXAMPLES -->
+      <div style="margin-bottom:2rem;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;" data-key="graphic-examples">Featured Work</div>
+        <div class="reel-embed" style="margin-bottom:1rem;">
+          <iframe src="https://www.youtube.com/embed/wkfr9lSC1Tk" allowfullscreen></iframe>
         </div>
-        <!-- DESCRIPTION -->
-        <div>
-          <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;font-style:italic;color:var(--gold-light);line-height:1.4;margin-bottom:1rem;">It's Okay</p>
-          <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;">A short film done in one take. Will he win her back — or will he lose her forever? A raw, intimate story about love, vulnerability, and second chances.</p>
-          <p style="font-size:0.75rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Premiering at Denver Side Hustle</p>
-          <p style="font-size:0.85rem;color:var(--cream);margin-bottom:2rem;">July 11, 2026 · Denver, Colorado</p>
-          <div class="reel-embed" style="margin-bottom:1rem;">
-            <iframe src="https://www.youtube.com/embed/WkWy8OhdpCo" allowfullscreen></iframe>
+        <div class="reel-embed">
+          <iframe src="https://www.youtube.com/embed/9XYwXXtCFmQ" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <!-- SERVICES -->
+      <div class="offer-box">
+        <div class="section-sub" data-key="graphic-offer-label">What I Offer</div>
+
+        <div class="offer-title" data-key="graphic-offer-title">Adobe Creative Cloud Services</div>
+        <p class="offer-body" data-key="graphic-offer-body">Professional graphic and motion design using the full Adobe Creative Cloud suite — bringing your brand to life through stunning visuals and cinematic animation.</p>
+
+        <div class="offer-tags" style="margin-bottom:1.5rem;">
+          <span class="tag" data-key="gtag-1">Logo Design & Branding</span>
+          <span class="tag" data-key="gtag-2">Motion Graphics</span>
+          <span class="tag" data-key="gtag-3">Social Media Graphics</span>
+          <span class="tag" data-key="gtag-4">Video Titles & Lower Thirds</span>
+          <span class="tag" data-key="gtag-5">Color Grading</span>
+          <span class="tag" data-key="gtag-6">Animated Intros/Outros</span>
+          <span class="tag" data-key="gtag-7">Poster & Flyer Design</span>
+          <span class="tag" data-key="gtag-8">Credits Animation</span>
+        </div>
+
+        <div class="gear-strip">
+          <span class="gear-label" data-key="graphic-software">Software</span>
+          <div class="gear-items">
+            <span class="gear-item">After Effects</span>
+            <span class="gear-item">Premiere Pro</span>
+            <span class="gear-item">Illustrator</span>
+            <span class="gear-item">Photoshop</span>
+            <span class="gear-item">DaVinci Resolve</span>
+            <span class="gear-item"></span>
           </div>
-          <p style="font-size:0.7rem;color:var(--muted);font-style:italic;">Official Trailer</p>
         </div>
-      </div>
-    </div>
 
+        <span class="rate-badge" data-key="graphic-rates">Contact for Rates</span>
+      </div>
+
+      <a href="#contact" class="btn-primary" style="margin-top:1rem;display:inline-block;" data-key="graphic-hire">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 WEB DESIGN -->
+<section id="webdesign">
+  <div class="section-label">
+    <span class="section-num">02</span>
+    <h2 class="section-title" data-key="s-web-title">Web Design</h2>
+    <div class="section-line"></div>
   </div>
 
-  <script>
-    let currentStory = 0;
-    const totalStories = 2;
+  <div class="modeling-layout">
+    <div>
+      <!-- WEBSITE EXAMPLE -->
+      <div style="margin-bottom:2rem;">
+        <div style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;" data-key="web-example-label">Live Example</div>
+<a href="https://carlosandres.me" target="_blank" class="btn-outline" style="font-size:0.75rem;" data-key="web-view-live">View Live Site — carlosandres.me</a>
+      </div>
 
-    function goToStory(n) {
-      document.getElementById('story-' + currentStory).style.display = 'none';
-      document.getElementById('dot-' + currentStory).style.background = 'rgba(196,169,107,0.3)';
-      currentStory = n;
-      document.getElementById('story-' + currentStory).style.display = 'block';
-      document.getElementById('dot-' + currentStory).style.background = 'var(--gold)';
-    }
+      <!-- DOMAIN NOTE -->
+      <div class="offer-box" style="margin-top:1.5rem;">
+        <div class="offer-title" data-key="web-domain-title">Domain & Hosting</div>
+        <p class="offer-body" data-key="web-domain-body">Your website is hosted for FREE on GitHub Pages. The only yearly cost is your domain name — purchased separately through Namecheap:</p>
+        <div class="offer-tags">
+          <span class="tag">.com — ~$15-18/yr</span>
+          <span class="tag">.me — ~$10-15/yr</span>
+          <span class="tag">.co — ~$10-12/yr</span>
+          <span class="tag" data-key="web-hosting-free">Hosting — FREE</span>
+        </div>
+        <p class="offer-body" style="font-size:0.78rem;margin-top:0.8rem;" data-key="web-domain-note">I can set up your domain and connect it to your site for a one-time setup fee.</p>
+      </div>
+    </div>
 
-    function nextStory() { goToStory((currentStory + 1) % totalStories); }
-    function prevStory() { goToStory((currentStory - 1 + totalStories) % totalStories); }
-  </script>
+    <div>
+      <!-- PACKAGES -->
+      <div class="offer-box" style="margin-bottom:1.5rem;">
+        <div class="section-sub" data-key="web-packages-label">Packages</div>
 
+        <!-- Starter -->
+        <div style="border-bottom:1px solid rgba(196,169,107,0.15);padding-bottom:1.2rem;margin-bottom:1.2rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
+            <div class="offer-title" style="margin:0;" data-key="web-pkg1-title">Starter</div>
+            <span style="color:var(--gold);font-size:0.9rem;font-weight:600;">$100–300</span>
+          </div>
+          <p class="offer-body" data-key="web-pkg1-desc">Perfect for small businesses or personal brands just getting started. Single page website with up to 5 sections, contact form, mobile responsive, and basic SEO setup.</p>
+          <div class="offer-tags">
+            <span class="tag" data-key="web-tag-1page">1 Page</span>
+            <span class="tag" data-key="web-tag-5sec">Up to 5 Sections</span>
+            <span class="tag" data-key="web-tag-contact">Contact Form</span>
+            <span class="tag" data-key="web-tag-mobile">Mobile Responsive</span>
+          </div>
+        </div>
+
+        <!-- Professional -->
+        <div style="border-bottom:1px solid rgba(196,169,107,0.15);padding-bottom:1.2rem;margin-bottom:1.2rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
+            <div class="offer-title" style="margin:0;" data-key="web-pkg2-title">Professional</div>
+            <span style="color:var(--gold);font-size:0.9rem;font-weight:600;">$400–700</span>
+          </div>
+          <p class="offer-body" data-key="web-pkg2-desc">Multi-section website like this one. Includes bilingual (EN/ES) toggle, photo gallery, embedded videos, Google Search Console setup, sitemap, and full SEO optimization.</p>
+          <div class="offer-tags">
+            <span class="tag" data-key="web-tag-multi">Multi-Section</span>
+            <span class="tag" data-key="web-tag-bilingual">Bilingual EN/ES</span>
+            <span class="tag" data-key="web-tag-gallery">Gallery</span>
+            <span class="tag">SEO</span>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div style="border-bottom:1px solid rgba(196,169,107,0.15);padding-bottom:1.2rem;margin-bottom:1.2rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
+            <div class="offer-title" style="margin:0;" data-key="web-pkg3-title">Premium</div>
+            <span style="color:var(--gold);font-size:0.9rem;font-weight:600;">$800–1300</span>
+          </div>
+          <p class="offer-body" data-key="web-pkg3-desc">Fully custom website with advanced animations, multiple languages, e-commerce ready, full SEO package, Google Business setup, and priority support.</p>
+          <div class="offer-tags">
+            <span class="tag" data-key="web-tag-custom">Full Custom</span>
+            <span class="tag" data-key="web-tag-anim">Animations</span>
+            <span class="tag" data-key="web-tag-ecom">E-Commerce Ready</span>
+            <span class="tag" data-key="web-tag-priority">Priority Support</span>
+          </div>
+        </div>
+
+        <!-- Maintenance -->
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
+            <div class="offer-title" style="margin:0;" data-key="web-pkg4-title">Maintenance</div>
+            <span style="color:var(--gold);font-size:0.9rem;font-weight:600;">$50–100/mo</span>
+          </div>
+          <p class="offer-body" data-key="web-pkg4-desc">Ongoing website updates, new sections, content changes, photo swaps, and general maintenance so your site always stays fresh and up to date.</p>
+          <div class="offer-tags">
+            <span class="tag" data-key="web-tag-updates">Monthly Updates</span>
+            <span class="tag" data-key="web-tag-content">Content Changes</span>
+            <span class="tag" data-key="web-tag-support">Ongoing Support</span>
+          </div>
+        </div>
+
+        <span class="rate-badge" style="margin-top:1.2rem;display:inline-block;" data-key="web-rates">All rates by inquiry</span>
+      </div>
+
+      <a href="#contact" class="btn-primary" style="display:inline-block;" data-key="web-hire">Get a Quote</a>
+    </div>
+  </div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="section-label">
     <span class="section-num">07</span>
-    <h2 class="section-title">Testimonials</h2>
+    <h2 class="section-title" data-key="test-title">Testimonials</h2>
     <div class="section-line"></div>
   </div>
-  <div style="padding:4rem 0;text-align:center;">
-    <p style="color:var(--muted);font-size:0.9rem;font-style:italic;">Reviews coming soon. 🏔️</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-bottom:3rem;">
+
+    <!-- Review 1 - Milagro -->
+    <div style="border:1px solid rgba(196,169,107,0.15);padding:1.5rem;background:var(--charcoal);">
+      <div style="color:#f5a623;font-size:1rem;margin-bottom:0.8rem;">⭐⭐⭐⭐⭐</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--cream);line-height:1.7;margin-bottom:1rem;">"Carlos made me an amazing video and website for my flowers and plants that I have. I can tell he puts a lot of love and effort to the content he makes and for a great price. Highly recommend!"</p>
+      <div style="display:flex;align-items:center;gap:0.8rem;">
+        <div style="width:36px;height:36px;border-radius:50%;background:rgba(196,169,107,0.2);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:0.75rem;font-weight:600;">MY</div>
+        <div>
+          <p style="font-size:0.78rem;color:var(--cream);font-weight:500;">Milagro Ycochea</p>
+          <p style="font-size:0.65rem;color:var(--muted);">Video Production & Web Design · Google Review</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 2 - Mark -->
+    <div style="border:1px solid rgba(196,169,107,0.15);padding:1.5rem;background:var(--charcoal);">
+      <div style="color:#f5a623;font-size:1rem;margin-bottom:0.8rem;">⭐⭐⭐⭐⭐</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--cream);line-height:1.7;margin-bottom:1rem;">"Great director! Has a clear vision and executes it with passion, commitment, and respect for the crew and actors."</p>
+      <div style="display:flex;align-items:center;gap:0.8rem;">
+        <div style="width:36px;height:36px;border-radius:50%;background:rgba(196,169,107,0.2);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:0.75rem;font-weight:600;">MB</div>
+        <div>
+          <p style="font-size:0.78rem;color:var(--cream);font-weight:500;">Mark Bautista</p>
+          <p style="font-size:0.65rem;color:var(--muted);">Film Direction · Google Review</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 3 - Sophia -->
+    <div style="border:1px solid rgba(196,169,107,0.15);padding:1.5rem;background:var(--charcoal);">
+      <div style="color:#f5a623;font-size:1rem;margin-bottom:0.8rem;">⭐⭐⭐⭐⭐</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--cream);line-height:1.7;margin-bottom:1rem;">"Had a great experience working with Carlos on a video project. He was easy to work with, had a great creative vision, and delivered exactly what I was looking for."</p>
+      <div style="display:flex;align-items:center;gap:0.8rem;">
+        <div style="width:36px;height:36px;border-radius:50%;background:#7c3aed;display:flex;align-items:center;justify-content:center;color:white;font-size:0.75rem;font-weight:600;">S</div>
+        <div>
+          <p style="font-size:0.78rem;color:var(--cream);font-weight:500;">Sophia Sarabasa</p>
+          <p style="font-size:0.65rem;color:var(--muted);">Video Production · Google Review</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 4 - Reimundo -->
+    <div style="border:1px solid rgba(196,169,107,0.15);padding:1.5rem;background:var(--charcoal);">
+      <div style="color:#f5a623;font-size:1rem;margin-bottom:0.8rem;">⭐⭐⭐⭐⭐</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--cream);line-height:1.7;margin-bottom:1rem;">"Working with him was great. He's someone who really knows what he's doing. We completed the project on time and with the level of quality that was expected, with no delays. He's a great person to work with and is able to solve any problem that comes up during both the creative and technical stages of the project."</p>
+      <div style="display:flex;align-items:center;gap:0.8rem;">
+        <div style="width:36px;height:36px;border-radius:50%;background:#e11d48;display:flex;align-items:center;justify-content:center;color:white;font-size:0.75rem;font-weight:600;">R</div>
+        <div>
+          <p style="font-size:0.78rem;color:var(--cream);font-weight:500;">Reimundo Marin</p>
+          <p style="font-size:0.65rem;color:var(--muted);">Video Production · Google Review</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 5 - Jennifer -->
+    <div style="border:1px solid rgba(196,169,107,0.15);padding:1.5rem;background:var(--charcoal);">
+      <div style="color:#f5a623;font-size:1rem;margin-bottom:0.8rem;">⭐⭐⭐⭐⭐</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--cream);line-height:1.7;margin-bottom:1rem;">"Carlos did great video production work for my band! He filmed one of our shows and nailed the audio and visuals, so now I have plenty of content for a variety of uses!"</p>
+      <div style="display:flex;align-items:center;gap:0.8rem;">
+        <div style="width:36px;height:36px;border-radius:50%;background:#6b7280;display:flex;align-items:center;justify-content:center;color:white;font-size:0.75rem;font-weight:600;">J</div>
+        <div>
+          <p style="font-size:0.78rem;color:var(--cream);font-weight:500;">Jennifer Udema</p>
+          <p style="font-size:0.65rem;color:var(--muted);">Video Production · Local Guide · Google Review</p>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <a href="https://g.page/r/CTIn8VgUBQ-TEAI/review" target="_blank" class="btn-outline" data-key="leave-review">⭐ Leave a Google Review</a>
+
 </section>
 
 <!-- CONTACT -->
@@ -859,7 +930,7 @@ const translations = {
     'hire-me': 'Hire Me for a Project',
     'contact-heading': 'Let\'s work together.',
     'contact-sub': 'Available for modeling, spokesperson videos, acting roles, brand content, video production, and voice over work in Denver and beyond. All rates by inquiry.',
-    'send-email': 'Send an Email', 'form-name': 'Name', 'form-email': 'Email', 'form-subject': 'Inquiry Type', 'form-select': 'Select an option', 'form-opt1': 'Video Production & Filming', 'form-opt2': 'Website Design', 'form-opt3': 'Graphic/Motion Design', 'form-opt4': 'Acting', 'form-opt5': 'Modeling', 'form-opt6': 'Other', 'form-message': 'Message', 'form-send': 'Send Message', 'leave-review': '⭐ Leave a Google Review', 'form-success': 'Thank you for reaching out! I will get back to you within 24-48 hours. 🏔️',
+    'send-email': 'Send an Email', 'form-name': 'Name', 'form-email': 'Email', 'form-subject': 'Inquiry Type', 'form-select': 'Select an option', 'form-opt1': 'Video Production & Filming', 'form-opt2': 'Website Design', 'form-opt3': 'Graphic/Motion Design', 'form-opt4': 'Acting', 'form-opt5': 'Modeling', 'form-opt6': 'Other', 'form-message': 'Message', 'form-send': 'Send Message', 'test-title': 'Testimonials', 'leave-review': '⭐ Leave a Google Review', 'form-success': 'Thank you for reaching out! I will get back to you within 24-48 hours. 🏔️',
     's-web-title': 'Web Design',
     'web-example-label': 'Live Example',
     'web-view-live': 'View Live Site — carlosandres.me',
@@ -927,7 +998,7 @@ const translations = {
     'hire-me': 'Contrátame para un Proyecto',
     'contact-heading': 'Trabajemos juntos.',
     'contact-sub': 'Disponible para modelaje, videos de portavoz, roles de actuación, contenido de marca, producción de video y locución en Denver y más allá. Tarifas por consulta.',
-    'send-email': 'Enviar un Correo', 'form-name': 'Nombre', 'form-email': 'Correo Electrónico', 'form-subject': 'Tipo de Consulta', 'form-select': 'Selecciona una opción', 'form-opt1': 'Producción de Video y Filmación', 'form-opt2': 'Diseño Web', 'form-opt3': 'Diseño Gráfico/Movimiento', 'form-opt4': 'Actuación', 'form-opt5': 'Modelaje', 'form-opt6': 'Otro', 'form-message': 'Mensaje', 'form-send': 'Enviar Mensaje', 'leave-review': '⭐ Dejar una Reseña en Google', 'form-success': '¡Gracias por contactarme! Te responderé en 24-48 horas. 🏔️',
+    'send-email': 'Enviar un Correo', 'form-name': 'Nombre', 'form-email': 'Correo Electrónico', 'form-subject': 'Tipo de Consulta', 'form-select': 'Selecciona una opción', 'form-opt1': 'Producción de Video y Filmación', 'form-opt2': 'Diseño Web', 'form-opt3': 'Diseño Gráfico/Movimiento', 'form-opt4': 'Actuación', 'form-opt5': 'Modelaje', 'form-opt6': 'Otro', 'form-message': 'Mensaje', 'form-send': 'Enviar Mensaje', 'test-title': 'Testimonios', 'leave-review': '⭐ Dejar una Reseña en Google', 'form-success': '¡Gracias por contactarme! Te responderé en 24-48 horas. 🏔️',
     's-web-title': 'Diseño Web',
     'web-example-label': 'Ejemplo en Vivo',
     'web-view-live': 'Ver Sitio en Vivo — carlosandres.me',
@@ -980,7 +1051,7 @@ function setLang(lang) {
 
   // Update nav links
   const navLinks = document.querySelectorAll('.nav-links a');
-  const navKeys = ['nav-stories', 'nav-content', 'nav-webdesign', 'nav-graphicdesign', 'nav-acting', 'nav-modeling', 'nav-testimonials', 'nav-contact'];
+  const navKeys = ['nav-stories', 'nav-acting', 'nav-modeling', 'nav-content', 'nav-graphicdesign', 'nav-webdesign', 'nav-testimonials', 'nav-contact'];
   navLinks.forEach((link, i) => { link.textContent = translations[lang][navKeys[i]]; });
 
   // Update all data-key elements
